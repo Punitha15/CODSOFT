@@ -3,25 +3,30 @@ using namespace std;
 int main(){
 char oper;
 float num1,num2;
-cout<<"Enter operator : +,-,*,/ : ";
+cout<<"WELCOME TO SIMPLE CALCULATOR"<<endl;
+cout<<"Enter operator ( + , - , * , / ): ";
 cin>>oper;
 cout<<"Enter two operands : ";
 cin>>num1>>num2;
 switch(oper){
         case '+':
+            cout<<"ADDITION OF TWO NUMBERS"<<endl;
             cout<<num1<<" + "<<num2<<" = "<<num1+num2;
             break;
         case '-':
+            cout<<"SUBTRACTION OF TWO NUMBERS"<<endl;
             cout<<num1<<" - "<<num2<<" = "<<num1+num2;
             break;
         case '*':
+            cout<<"MULTIPLICATION OF TWO NUMBERS"<<endl;
             cout<<num1<<" * "<<num2<<" = "<<num1+num2;
             break;
         case '/':
+            cout<<"DIVISION OF TWO NUMBERS"<<endl;
             cout<<num1<<" / "<<num2<<" = "<<num1+num2;
             break;
         default:
-            cout<<"Error! This operator is not correct";
+            cout<<"Error! Invalid operator";
             break;
 }
 return 0;
