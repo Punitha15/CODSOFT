@@ -1,29 +1,34 @@
 #include <iostream>
 using namespace std;
-int main()
-{
-int randomNumber = rand() % 100 + 1;
-cout<<"              Welcome to the NUMBER GUESSING GAME "<<endl;
-int  attempts = 0;
-int guess = 0;
-while(guess != randomNumber){
-cout<<"                     GUESS THE NUMBER!!!";
-cin>>guess;
-if(guess < randomNumber){
-cout<<"WOOPS, The number you guessed is low than the random number. So Try again."<<endl;
-}
-else if(guess > randomNumber){
-cout<<"WOOPS, The number you guessed is high than the random number . So Try again."<<endl;
-}
-attempts++;
-}
-string result;
-if(attempts > 3){
-result = " YOU LOSE!";
-}
-else if (attempts < 3){
-result = " YOU WIN!";
-}
-cout<<" Great job you only took "<<attempts<<" attempts to guess the number!"<<result;
-return 0;
+
+int main() {
+    // Set a predefined secret number (this can be any number of your choice)
+    int secretNumber = 42;  // For example, the number to guess is 42.
+
+    int userGuess = 0;  // Variable to store the user's guess
+    int numTries = 0;  // To count the number of attempts
+
+    // Game introduction
+    cout << "WELCOME TO THE NUMBER GUESSING GAME!" << endl;
+    cout<<endl;
+    cout << "I have selected a secret number. Try to guess it!" << endl;
+
+    // Loop until the user guesses the correct number
+    while (userGuess != secretNumber) {
+        cout << "Enter your guess: ";
+        cin >> userGuess;  // Accept user input for their guess
+        numTries++;  // Increment the attempt counter
+
+        if (userGuess < secretNumber) {
+            cout << "Your guess is too low. Try again!" << endl;
+        }
+        else if (userGuess > secretNumber) {
+            cout << "Your guess is too high. Try again!" << endl;
+        }
+    }
+
+    // Correct guess
+    cout << "Congratulations! You guessed the correct number " << secretNumber << " in " << numTries << " attempts." << endl;
+
+    return 0;
 }
