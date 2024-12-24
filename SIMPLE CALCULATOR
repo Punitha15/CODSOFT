@@ -15,15 +15,15 @@ switch(oper){
             break;
         case '-':
             cout<<"SUBTRACTION OF TWO NUMBERS"<<endl;
-            cout<<num1<<" - "<<num2<<" = "<<num1+num2<<endl;
+            cout<<num1<<" - "<<num2<<" = "<<num1-num2<<endl;
             break;
         case '*':
             cout<<"MULTIPLICATION OF TWO NUMBERS"<<endl;
-            cout<<num1<<" * "<<num2<<" = "<<num1+num2<<endl;
+            cout<<num1<<" * "<<num2<<" = "<<num1*num2<<endl;
             break;
         case '/':
             cout<<"DIVISION OF TWO NUMBERS"<<endl;
-            cout<<num1<<" / "<<num2<<" = "<<num1+num2<<endl;
+            cout<<num1<<" / "<<num2<<" = "<<num1/num2<<endl;
             break;
         default:
             cout<<"Error! Invalid operator"<<endl;
